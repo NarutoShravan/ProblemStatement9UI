@@ -1,18 +1,19 @@
 
-<div class="container center">
-    <div class="jumbotron">
-
-
+<div class="container center centerDiv" >
+        <nav class="navbar navbar-light " style="background-color: #e3f2fd;">
+            <a class="navbar-brand " href="#" style="margin-left: 10px;"> Problem Statement 9</a>
+          </nav>
+          
+<br>
  <div class="text-center">
-    <input class="form-control" type="file" 
+    <input #fileInput class="form-control" type="file" 
             (change)="onChange($event)">
-  
-    <button mat-raised-button (click)="onUpload()" >
+  <br>
+    <button mat-raised-button color="primary" (click)="onUpload()" style="width:130px;">
         Upload
     </button>
 </div>
 
-<br>
 <br>
 <mat-form-field>
     <mat-label>Filter</mat-label>
@@ -65,5 +66,4 @@
     <h3>Loading ...</h3>
 </div>
 
-</div>
 </div>
