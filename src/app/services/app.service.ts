@@ -9,7 +9,7 @@ export class AppService {
 
 
   // API url
-  uploadUrl = "https://localhost:7045/Document/uploadFromUI";
+  uploadUrl = "https://localhost:7045/Document/upload";
   getDataUrl = "https://localhost:7045/Document";
     
   constructor(private http:HttpClient) { }

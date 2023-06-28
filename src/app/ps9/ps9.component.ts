@@ -69,13 +69,12 @@ export class PS9Component {
 
   // OnClick of button Upload
   onUpload() {
-    debugger;
-      this.loading = !this.loading;
+    
       this.appService.upload(this.file).subscribe(
           (event: any) => {
               if (typeof (event) === 'object') {
 
-                  this.loading = false;
+                  
               }
           }
       );
