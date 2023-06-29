@@ -79,17 +79,17 @@ export class PS9Component {
     this.myFileInput.nativeElement.value = '';
       this.appService.upload(this.file).subscribe(
         (response: any) => {                           //Next callback
-          this.openSnackBar('Successful', '✓');
+          this.openSnackBar('File Uploaded Successful', '✓');
           this.getFilesData();
         },
         (error: any) => {      
                    //Error callback
          if(error.statusText == 'OK'){
-            this.openSnackBar('Successful', '✓');
+            this.openSnackBar('File Uploaded Successful', '✓');
             this.getFilesData();
           }
           else{
-            this.openSnackBar('Failed', 'X');
+            this.openSnackBar('File Upload Failed', 'X');
           }
         }
       );
