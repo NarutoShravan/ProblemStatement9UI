@@ -25,7 +25,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 export class PS9Component {
   loading: boolean = false; 
-  @ViewChild('fileInput')
+  @ViewChild('fileInput',{static: false}) 
   myFileInput!: ElementRef;
   file?: File ;
 
@@ -76,7 +76,8 @@ export class PS9Component {
 
   // OnClick of button Upload
   onUpload() {
-    this.myFileInput.nativeElement.value = '';
+    if(this.myFileInput.nativeElement.value != '' ){
+      this.myFileInput.nativeElement.value = '';
       this.appService.upload(this.file).subscribe(
         (response: any) => {                           //Next callback
           this.openSnackBar('File Uploaded Successful', '✓');
@@ -93,5 +94,6 @@ export class PS9Component {
           }
         }
       );
+    } 
   }
 }

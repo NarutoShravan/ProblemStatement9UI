@@ -15,7 +15,6 @@ export class AppService {
   constructor(private http:HttpClient) { }
   
   getFilesData():Observable<any> {
-    debugger;
     return this.http.get(this.getDataUrl);
 
   }
