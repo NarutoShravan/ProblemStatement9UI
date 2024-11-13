@@ -1,0 +1,27 @@
+<!-- <div class="number-input">
+
+    <mat-form-field class="example-full-width">
+        <mat-label>{{label}}</mat-label>
+        <mat-icon matPrefix (click)="decrement()">remove</mat-icon>
+        <input matInput placeholder="" [(ngModel)]="value" type="number">
+        <mat-icon matSuffix (click)="increment()">add</mat-icon>
+      </mat-form-field>
+
+  </div>
+   -->
+
+   <mat-form-field floatLabel="always" class="example-full-width">
+    <mat-label >{{label}}</mat-label>
+    <i class="p-2" matSuffix (click)="increment()">+</i>
+    <input matInput type="number" [value]="value" (input)="onInput($event)">
+    <i class="p-3" matPrefix (click)="decrement()">-</i>
+  </mat-form-field>
+
+  <button mat-raised-button [matTooltip]="tooltipContent" matTooltipClass="multiline-tooltip">
+    Hover me for multiline tooltip on the left
+  </button>
+
+  <br>
+  <br>
+  <br>
+  <app-ps9 [formGroup]="form" appBeforeUnload></app-ps9>

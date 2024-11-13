@@ -1,0 +1,10 @@
+.number-input {
+    display: flex;
+    align-items: center;
+  }
+  
+  ::ng-deep .mat-form-field-label-wrapper {
+    overflow: visible;
+    margin-left: -12.953px;
+  }
+  

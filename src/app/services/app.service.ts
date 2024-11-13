@@ -16,7 +16,6 @@ export class AppService {
   
   getFilesData():Observable<any> {
     return this.http.get(this.getDataUrl);
-
   }
 
   // Returns an observable

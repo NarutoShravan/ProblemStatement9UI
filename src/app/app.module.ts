@@ -16,11 +16,21 @@ import { MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { NumberInputComponent } from './number-input/number-input.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { TableBasicExampleComponent } from './table-basic-example/table-basic-example.component';
+import { BeforeUnloadDirective } from './directives/before-unload.directive';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PS9Component
+    PS9Component,
+    NumberInputComponent,
+    TableBasicExampleComponent,
+    BeforeUnloadDirective
   ],
   imports: [
     BrowserModule,
@@ -34,9 +44,14 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatTableModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatTooltipModule,
+    MatProgressSpinnerModule,
+    BrowserAnimationsModule
   ],
   providers: [AppService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

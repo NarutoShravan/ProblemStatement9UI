@@ -1,0 +1,25 @@
+/* td {
+    white-space: normal;
+  }
+  
+ 
+  table {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+ 
+  td.mat-column-name,
+  td.mat-column-age,
+  td.mat-column-description {
+    flex-basis: 100%;
+  } 
+   */
+
+
+   .custom-spinner-container .mat-spinner {
+    border-color: red; /* Replace 'red' with your custom color */
+  }
+
+
+  
